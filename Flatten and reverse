@@ -1,0 +1,25 @@
+--------Flatten List-----------
+
+var=[[1,'a',['cat'],2],[[[3]],'dog'],4,5] 
+flatten=[]
+
+def flt(x):
+  for i in x:
+    if type(i)==list:
+      flt(i)
+    else:
+      flatten.append(i)
+
+flt(var)
+print(flatten)
+
+--------Reverse List----------
+
+liste=[[1, 2], [3, 4], [5, 6, 7]]
+def rvrs(x):
+  for i in x:
+    if type(i)==list:
+      i=i.reverse() 
+    x.reverse() 
+rvrs(liste)
+print(liste)
